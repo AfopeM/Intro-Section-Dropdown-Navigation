@@ -19,16 +19,20 @@
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
-    <main class="main overlay">
+    <main class="main">
+      <div class="overlay"></div>
       <nav class="nav">
         <img src="images/logo.svg" alt="logo" class="logo" />
+        <input type="checkbox" name="" class="check-burgermenu" />
         <div class="burger-menu">
-          <span class="burgers"></span>
+          <span class="line line--1"></span>
+          <span class="line line--2"></span>
+          <span class="line line--3"></span>
         </div>
         <div class="nav__menu">
           <ul class="nav__menu-main">
             <li class="nav__menu-items">
-              <a href="#" class="nav__links">
+              <a href="#" id="features" class="nav__links">
                 Features
                 <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
               </a>

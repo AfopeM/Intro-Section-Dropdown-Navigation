@@ -1,0 +1,10 @@
+@use "base" as b;
+
+.overlay {
+  display: none;
+  position: absolute;
+
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(b.$Almost-Black, 0.7);
+}

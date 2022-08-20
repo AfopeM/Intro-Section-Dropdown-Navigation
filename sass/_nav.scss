@@ -1,0 +1,138 @@
+@use "base" as b;
+// NAV
+.nav {
+  position: relative;
+  height: 8vh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    width: 70vw;
+    transform: translateX(100%);
+
+    @include b.flex;
+    justify-content: space-around;
+    padding-left: 1.5rem;
+
+    background-color: aqua;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__menu-main,
+  &__menu-sub {
+    @include b.flex;
+    gap: 2.5rem;
+  }
+
+  &__menu-sub {
+    align-items: center;
+  }
+
+  &__menu-items {
+    height: 20px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    color: b.$Medium-Gray;
+  }
+}
+
+// LOGO
+.logo {
+  margin-left: 5vw;
+}
+
+// DROPDOWN MENU
+.dropdown {
+  @include b.flex;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.reveal {
+  &--features {
+    height: 180px;
+  }
+  &--company {
+    height: 135px;
+  }
+}
+
+// BURGER MENU
+.burger-menu {
+  display: block;
+  height: 25px;
+  width: 35px;
+
+  position: absolute;
+  top: 50%;
+  right: 5vw;
+  transform: translate(0, -50%);
+  z-index: 9;
+
+  @include b.flex;
+  justify-content: space-between;
+
+  .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: b.$Almost-Black;
+
+    &--1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+    &--2 {
+      transition: transform 0.2s ease-in-out;
+    }
+    &--3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+}
+
+// ACTIVATE SIDE MENU
+.check-burgermenu {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 6.5vw;
+  transform: translate(0, -50%);
+  z-index: 10;
+
+  height: 2rem;
+  width: 1.8rem;
+  opacity: 0;
+
+  &:checked ~ .burger-menu {
+    .line--1 {
+      transform: rotate(38deg);
+    }
+    .line--2 {
+      transform: scaleY(0);
+    }
+    .line--3 {
+      transform: rotate(-38deg);
+    }
+  }
+
+  &:checked ~ .nav__menu {
+    transform: translateX(0);
+  }
+}
