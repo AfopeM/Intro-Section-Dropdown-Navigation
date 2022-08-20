@@ -1,0 +1,22 @@
+{
+  "name": "intro-section-with-dropdown-navigation",
+  "version": "1.0.0",
+  "description": "Intro Section with dropdown Navigation",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfopeM/Intro-Section-Dropdown-Navigation.git"
+  },
+  "author": "AfopeM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AfopeM/Intro-Section-Dropdown-Navigation/issues"
+  },
+  "homepage": "https://github.com/AfopeM/Intro-Section-Dropdown-Navigation#readme",
+  "dependencies": {
+    "sass": "^1.54.4"
+  }
+}

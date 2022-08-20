@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%;
+  font-family: "Epilogue", sans-serif;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+/*# sourceMappingURL=style.css.map */

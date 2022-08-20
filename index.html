@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script/script.js" defer></script>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <main class="main overlay">
+      <nav class="nav">
+        <img src="images/logo.svg" alt="logo" class="logo" />
+        <div class="burger-menu">
+          <span class="burgers"></span>
+        </div>
+        <div class="nav__menu">
+          <ul class="nav__menu-main">
+            <li class="nav__menu-items">
+              <a href="#" class="nav__links">
+                Features
+                <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
+              </a>
+              <div id="dropdown-features" class="dropdown">
+                <a href="#" class="dropdown__content">
+                  <img src="images/icon-todo.svg" alt="icon-todo" />
+                  Todo List
+                </a>
+                <a href="#" class="dropdown__content">
+                  <img src="images/icon-calendar.svg" alt="icon-calendar" />
+                  Calender
+                </a>
+                <a href="#" class="dropdown__content">
+                  <img src="images/icon-reminders.svg" alt="icon-reminders" />
+                  Reminders
+                </a>
+                <a href="#" class="dropdown__content">
+                  <img src="images/icon-planning.svg" alt="icon-planning" />
+                  Planning
+                </a>
+              </div>
+            </li>
+            <li class="nav__menu-items">
+              <a href="#" class="nav__links">
+                Company
+                <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
+              </a>
+              <div id="dropdown-company" class="dropdown">
+                <a href="#" class="dropdown__content">History</a>
+                <a href="#" class="dropdown__content">Our Team</a>
+                <a href="#" class="dropdown__content">Blog</a>
+              </div>
+            </li>
+            <li class="nav__menu-items">
+              <a href="#" class="nav__links">Careers</a>
+            </li>
+            <li class="nav__menu-items">
+              <a href="#" class="nav__links">About</a>
+            </li>
+          </ul>
+          <ul class="nav__menu-sub">
+            <li class="nav__menu-items">
+              <a href="#" class="nav__links">Login</a>
+            </li>
+            <li class="nav__menu-items">
+              <button class="btn">Register</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="header__image-hero">
+          <img src="images/image-hero-mobile.png" alt="hero image" />
+        </div>
+        <div class="header__content">
+          <h1 class="header__title">Make remote work</h1>
+          <p class="header__text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn btn--dark">Learn more</button>
+          <div class="clients">
+            <img src="images/client-databiz.svg" alt="client-databiz" />
+            <img src="images/client-audiophile.svg" alt="client-audiophile" />
+            <img src="images/client-meet.svg" alt="client-meet" />
+            <img src="images/client-maker.svg" alt="client-maker" />
+          </div>
+        </div>
+      </header>
+    </main>
+  </body>
+</html>

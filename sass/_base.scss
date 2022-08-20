@@ -1,0 +1,28 @@
+// RESPONSIVE
+
+$Mobile: 375px;
+$Desktop: 1440px;
+
+//COLOR
+// NEUTRAL
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 112.5%;
+  font-family: "Epilogue", sans-serif;
+}
+
+body {
+  background-color: $Almost-White;
+}
