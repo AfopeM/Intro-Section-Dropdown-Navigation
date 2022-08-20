@@ -39,6 +39,51 @@ a {
   background-color: rgba(20, 20, 20, 0.7);
 }
 
+.btn {
+  border: none;
+  border: 2px solid hsl(0deg, 0%, 8%);
+  border-radius: 20px;
+  font-size: 1rem;
+  padding: 1rem 6rem;
+  color: hsl(0deg, 0%, 41%);
+  background-color: transparent;
+}
+.btn--dark {
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 15px;
+  padding: 0.8rem 2rem;
+  color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 8%);
+}
+
+.header {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.header__content {
+  text-align: center;
+}
+.header__title {
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 8%);
+  margin-bottom: 1rem;
+}
+.header__text {
+  width: 80%;
+  line-height: 1.5;
+  margin: 0 auto 1.5rem auto;
+}
+.header__clients {
+  margin-top: 4.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .nav {
   position: relative;
   height: 8vh;
@@ -57,13 +102,13 @@ a {
   flex-direction: column;
   justify-content: space-around;
   padding-left: 1.5rem;
-  background-color: aqua;
+  background-color: hsl(0deg, 0%, 98%);
   transition: transform 0.5s ease-in-out;
 }
 .nav__menu-main, .nav__menu-sub {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 .nav__menu-sub {
   align-items: center;

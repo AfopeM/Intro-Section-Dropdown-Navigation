@@ -21,14 +21,14 @@
     justify-content: space-around;
     padding-left: 1.5rem;
 
-    background-color: aqua;
+    background-color: b.$Almost-White;
     transition: transform 0.5s ease-in-out;
   }
 
   &__menu-main,
   &__menu-sub {
     @include b.flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 
   &__menu-sub {
