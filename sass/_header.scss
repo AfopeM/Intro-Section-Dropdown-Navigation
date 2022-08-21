@@ -3,8 +3,10 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  justify-items: center;
   align-items: center;
+  gap: 5rem;
+  padding: 1rem 0;
 
   &__content {
     text-align: center;
@@ -23,9 +25,19 @@
   }
 
   &__clients {
-    margin-top: 4.5rem;
+    margin-top: 6rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+}
+
+@media (min-width: b.$Tablet) {
+  .header {
+    gap: 1.5rem;
+
+    &__clients {
+      margin-top: 1rem;
+    }
   }
 }

@@ -11,20 +11,58 @@
 
 .btn {
   border: none;
-  border: 2px solid b.$Almost-Black;
+  border: 2px solid b.$Medium-Gray;
   border-radius: 20px;
 
   font-size: 1rem;
-  padding: 1rem 6rem;
+  font-family: inherit;
+  padding: 0.8rem 4rem;
   color: b.$Medium-Gray;
   background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: b.$Almost-Black;
+    border: 2px solid b.$Almost-Black;
+  }
 
   &--dark {
-    font-size: 1rem;
     font-weight: 700;
     border-radius: 15px;
     padding: 0.8rem 2rem;
     color: b.$Almost-White;
+    border: 2px solid b.$Almost-Black;
     background-color: b.$Almost-Black;
+
+    &:hover {
+      color: b.$Almost-Black;
+      background-color: transparent;
+    }
+  }
+}
+
+.collapse--desktop {
+  transform: scale(0);
+}
+
+.expand {
+  &--features {
+    height: 180px;
+  }
+  &--company {
+    height: 135px;
+  }
+}
+
+// DESKTOP
+@media (min-width: b.$Desktop) {
+  .btn {
+    font-size: 0.8rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+
+    &--dark {
+      font-size: 1rem;
+    }
   }
 }

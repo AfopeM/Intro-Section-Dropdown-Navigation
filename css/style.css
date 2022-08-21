@@ -41,28 +41,61 @@ a {
 
 .btn {
   border: none;
-  border: 2px solid hsl(0deg, 0%, 8%);
+  border: 2px solid hsl(0deg, 0%, 41%);
   border-radius: 20px;
   font-size: 1rem;
-  padding: 1rem 6rem;
+  font-family: inherit;
+  padding: 0.8rem 4rem;
   color: hsl(0deg, 0%, 41%);
   background-color: transparent;
+  cursor: pointer;
+}
+.btn:hover {
+  color: hsl(0deg, 0%, 8%);
+  border: 2px solid hsl(0deg, 0%, 8%);
 }
 .btn--dark {
-  font-size: 1rem;
   font-weight: 700;
   border-radius: 15px;
   padding: 0.8rem 2rem;
   color: hsl(0deg, 0%, 98%);
+  border: 2px solid hsl(0deg, 0%, 8%);
   background-color: hsl(0deg, 0%, 8%);
 }
+.btn--dark:hover {
+  color: hsl(0deg, 0%, 8%);
+  background-color: transparent;
+}
 
+.collapse--desktop {
+  transform: scale(0);
+}
+
+.expand--features {
+  height: 180px;
+}
+.expand--company {
+  height: 135px;
+}
+
+@media (min-width: 780px) {
+  .btn {
+    font-size: 0.8rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+  }
+  .btn--dark {
+    font-size: 1rem;
+  }
+}
 .header {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  justify-items: center;
   align-items: center;
+  gap: 5rem;
+  padding: 1rem 0;
 }
 .header__content {
   text-align: center;
@@ -78,18 +111,28 @@ a {
   margin: 0 auto 1.5rem auto;
 }
 .header__clients {
-  margin-top: 4.5rem;
+  margin-top: 6rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+@media (min-width: 580px) {
+  .header {
+    gap: 1.5rem;
+  }
+  .header__clients {
+    margin-top: 1rem;
+  }
+}
 .nav {
   position: relative;
   height: 8vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 .nav__menu {
   position: fixed;
@@ -101,7 +144,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 1.5rem;
+  padding: 0 1.5rem;
   background-color: hsl(0deg, 0%, 98%);
   transition: transform 0.5s ease-in-out;
 }
@@ -124,9 +167,8 @@ a {
   gap: 1rem;
   color: hsl(0deg, 0%, 41%);
 }
-
-.logo {
-  margin-left: 5vw;
+.nav__links:hover {
+  color: hsl(0deg, 0%, 8%);
 }
 
 .dropdown {
@@ -137,20 +179,13 @@ a {
   padding-left: 1.5rem;
 }
 
-.reveal--features {
-  height: 180px;
-}
-.reveal--company {
-  height: 135px;
-}
-
 .burger-menu {
   display: block;
   height: 25px;
   width: 35px;
   position: absolute;
   top: 50%;
-  right: 5vw;
+  right: 0;
   transform: translate(0, -50%);
   z-index: 9;
   display: flex;
@@ -179,11 +214,11 @@ a {
   display: block;
   position: absolute;
   top: 50%;
-  right: 6.5vw;
+  right: 0;
   transform: translate(0, -50%);
   z-index: 10;
   height: 2rem;
-  width: 1.8rem;
+  width: 2rem;
   opacity: 0;
 }
 .check-burgermenu:checked ~ .burger-menu .line--1 {
@@ -197,6 +232,77 @@ a {
 }
 .check-burgermenu:checked ~ .nav__menu {
   transform: translateX(0);
+}
+
+@media (min-width: 780px) {
+  .burger-menu,
+.check-burgermenu {
+    display: none;
+  }
+  .logo {
+    margin-left: unset;
+  }
+  .nav {
+    position: relative;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 4rem;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .nav__menu {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: unset;
+    background-color: transparent;
+    transition: unset;
+  }
+  .nav__menu-main, .nav__menu-sub {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .nav__menu-sub {
+    align-items: center;
+  }
+  .nav__menu-items {
+    font-size: 0.8rem;
+    height: unset;
+    overflow: visible;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+  }
+  .nav__links {
+    gap: 0.4rem;
+  }
+  .dropdown {
+    position: absolute;
+    top: 30px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: hsl(0deg, 0%, 98%);
+    box-shadow: 10px 10px 20px rgba(20, 20, 20, 0.3);
+  }
+  .dropdown--feat {
+    right: 0;
+    width: 135px;
+  }
+  .dropdown--comp {
+    left: 0;
+    width: 110px;
+  }
+  .dropdown__content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

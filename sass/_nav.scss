@@ -7,6 +7,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 
   &__menu {
     position: fixed;
@@ -19,7 +21,7 @@
 
     @include b.flex;
     justify-content: space-around;
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
 
     background-color: b.$Almost-White;
     transition: transform 0.5s ease-in-out;
@@ -45,14 +47,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-
     color: b.$Medium-Gray;
-  }
-}
 
-// LOGO
-.logo {
-  margin-left: 5vw;
+    &:hover {
+      color: b.$Almost-Black;
+    }
+  }
 }
 
 // DROPDOWN MENU
@@ -63,15 +63,6 @@
   padding-left: 1.5rem;
 }
 
-.reveal {
-  &--features {
-    height: 180px;
-  }
-  &--company {
-    height: 135px;
-  }
-}
-
 // BURGER MENU
 .burger-menu {
   display: block;
@@ -80,7 +71,7 @@
 
   position: absolute;
   top: 50%;
-  right: 5vw;
+  right: 0;
   transform: translate(0, -50%);
   z-index: 9;
 
@@ -112,12 +103,12 @@
   display: block;
   position: absolute;
   top: 50%;
-  right: 6.5vw;
+  right: 0;
   transform: translate(0, -50%);
   z-index: 10;
 
   height: 2rem;
-  width: 1.8rem;
+  width: 2rem;
   opacity: 0;
 
   &:checked ~ .burger-menu {
@@ -134,5 +125,96 @@
 
   &:checked ~ .nav__menu {
     transform: translateX(0);
+  }
+}
+
+@media (min-width: b.$Desktop) {
+  .burger-menu,
+  .check-burgermenu {
+    display: none;
+  }
+
+  .logo {
+    margin-left: unset;
+  }
+
+  .nav {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 4rem;
+
+    width: 95%;
+    margin: 0 auto;
+
+    &__menu {
+      position: relative;
+
+      height: 100%;
+      width: 100%;
+      transform: translateX(0);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: unset;
+
+      background-color: transparent;
+      transition: unset;
+    }
+
+    &__menu-main,
+    &__menu-sub {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    &__menu-sub {
+      align-items: center;
+    }
+
+    &__menu-items {
+      font-size: 0.8rem;
+      height: unset;
+      overflow: visible;
+      transition: all 0.2s ease-in-out;
+
+      position: relative;
+    }
+
+    &__links {
+      gap: 0.4rem;
+    }
+  }
+
+  // DESKTOP DROPDOWN MENU
+  .dropdown {
+    position: absolute;
+    top: 30px;
+
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: b.$Almost-White;
+    box-shadow: 10px 10px 20px rgba(b.$Almost-Black, 0.3);
+
+    &--feat {
+      right: 0;
+      width: 135px;
+    }
+
+    &--comp {
+      left: 0;
+      width: 110px;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
 }
