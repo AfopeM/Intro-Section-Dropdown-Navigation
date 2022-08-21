@@ -32,12 +32,62 @@
   }
 }
 
+.image-hero {
+  &--desktop {
+    display: none;
+  }
+}
+
 @media (min-width: b.$Tablet) {
   .header {
     gap: 1.5rem;
 
     &__clients {
       margin-top: 1rem;
+    }
+  }
+}
+
+@media (min-width: b.$Desktop) {
+  .header {
+    width: 80%;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    align-items: end;
+    gap: 6rem;
+    padding: 3rem 0;
+
+    &__content {
+      text-align: start;
+      grid-row: 1;
+    }
+
+    &__title {
+      font-size: 4.3rem;
+      margin-bottom: 3rem;
+    }
+
+    &__text {
+      width: 90%;
+      margin: 0 0 3rem 0;
+    }
+
+    &__clients {
+      margin-top: 6rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  .image-hero {
+    &--mobile {
+      display: none;
+    }
+    &--desktop {
+      display: block;
     }
   }
 }

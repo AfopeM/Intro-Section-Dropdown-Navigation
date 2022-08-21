@@ -67,25 +67,16 @@ a {
   background-color: transparent;
 }
 
-.collapse--desktop {
-  transform: scale(0);
-}
-
-.expand--features {
-  height: 180px;
-}
-.expand--company {
-  height: 135px;
-}
-
 @media (min-width: 780px) {
   .btn {
     font-size: 0.8rem;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
+    border-radius: 13px;
+    padding: 0.6rem 1rem;
   }
   .btn--dark {
     font-size: 1rem;
+    padding: 1rem 1.3rem;
+    border-radius: 15px;
   }
 }
 .header {
@@ -117,12 +108,51 @@ a {
   align-items: center;
 }
 
+.image-hero--desktop {
+  display: none;
+}
+
 @media (min-width: 580px) {
   .header {
     gap: 1.5rem;
   }
   .header__clients {
     margin-top: 1rem;
+  }
+}
+@media (min-width: 780px) {
+  .header {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    align-items: end;
+    gap: 6rem;
+    padding: 3rem 0;
+  }
+  .header__content {
+    text-align: start;
+    grid-row: 1;
+  }
+  .header__title {
+    font-size: 4.3rem;
+    margin-bottom: 3rem;
+  }
+  .header__text {
+    width: 90%;
+    margin: 0 0 3rem 0;
+  }
+  .header__clients {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .image-hero--mobile {
+    display: none;
+  }
+  .image-hero--desktop {
+    display: block;
   }
 }
 .nav {
@@ -288,7 +318,7 @@ a {
     padding: 1rem;
     border-radius: 10px;
     background-color: hsl(0deg, 0%, 98%);
-    box-shadow: 10px 10px 20px rgba(20, 20, 20, 0.3);
+    box-shadow: 10px 10px 20px rgba(20, 20, 20, 0.2);
   }
   .dropdown--feat {
     right: 0;
