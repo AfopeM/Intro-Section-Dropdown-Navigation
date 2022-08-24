@@ -47,3 +47,29 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.hide {
+  opacity: 0;
+}
+
+.collapse {
+  height: 0;
+
+  &--main-menu {
+    transform: translateX(100%);
+  }
+}
+
+.expand {
+  height: auto;
+  padding-top: 1rem;
+
+  &--main-menu {
+    transform: translateX(0);
+  }
+
+  &--desktop {
+    height: auto;
+    padding: 1rem;
+  }
+}

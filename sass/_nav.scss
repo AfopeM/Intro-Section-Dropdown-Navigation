@@ -17,7 +17,7 @@
 
     height: 100vh;
     width: 70vw;
-    transform: translateX(100%);
+    z-index: 8;
 
     @include b.flex;
     justify-content: space-around;
@@ -37,12 +37,6 @@
     align-items: center;
   }
 
-  &__menu-items {
-    height: 20px;
-    overflow: hidden;
-    transition: all 0.2s ease-in-out;
-  }
-
   &__links {
     display: flex;
     align-items: center;
@@ -59,8 +53,9 @@
 .dropdown {
   @include b.flex;
   gap: 1rem;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
+  transform: translateX(25px);
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 // BURGER MENU
@@ -122,12 +117,9 @@
       transform: rotate(-38deg);
     }
   }
-
-  &:checked ~ .nav__menu {
-    transform: translateX(0);
-  }
 }
 
+// DESKTOP
 @media (min-width: b.$Desktop) {
   .burger-menu,
   .check-burgermenu {
@@ -196,9 +188,9 @@
     position: absolute;
     top: 30px;
 
-    padding: 1rem;
     border-radius: 10px;
     background-color: b.$Almost-White;
+    transform: unset;
     box-shadow: 10px 10px 20px rgba(b.$Almost-Black, 0.2);
 
     &--feat {
